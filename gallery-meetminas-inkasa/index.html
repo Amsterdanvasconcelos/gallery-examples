@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+
+    <script defer src="script.js"></script>
+    
+    <title>Gallery with Modal</title>
+</head>
+<body>
+    
+    <div class="c-gallery">
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_0.png" alt="">
+            <div class="c-gallery__description">Imagem 01</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_1.png" alt="">
+            <div class="c-gallery__description">Imagem 02</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_2.png" alt="">
+            <div class="c-gallery__description">Imagem 03</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_3.png" alt="">
+            <div class="c-gallery__description">Imagem 04</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_4.png" alt="">
+            <div class="c-gallery__description">Imagem 05</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_5.png" alt="">
+            <div class="c-gallery__description">Imagem 06</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_6.png" alt="">
+            <div class="c-gallery__description">Imagem 07</div>
+        </div>
+        <div class="c-gallery__item" data-gallery="gallery-item">
+            <img class="c-gallery__img" src="img/photo_7.png" alt="">
+            <div class="c-gallery__description">Imagem 08</div>
+        </div>
+    </div>
+
+    <div class="l-modal">
+        <div class="c-modal" data-modal="modal">
+            <div class="c-modal__btn-close" data-modal="btn-close"><i class="fa-regular fa-circle-xmark"></i></div>
+            <div class="c-modal__content">
+                <div class="c-modal__number" data-modal="slider-number">1 / 8</div>
+                <img src="img/photo_0.png" alt="" class="c-modal__img" data-modal="slider-img">
+                <div class="c-modal__description" data-modal="slider-description">Imagem 01</div>
+                <div class="c-modal__thumbs">
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_0.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_1.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_2.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_3.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_4.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_5.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_6.png" alt="">
+                    </div>
+                    <div class="c-modal__thumb" data-modal="thumb-img">
+                        <img class="c-modal__thumb-img" src="img/photo_7.png" alt="">
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

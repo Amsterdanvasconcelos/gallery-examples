@@ -1,0 +1,114 @@
+.l-modal {
+    display: flex;
+    justify-content: center;
+}
+
+.c-modal {
+    position: fixed;
+    top: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.c-modal--active {
+    display: flex;
+}
+
+.c-modal__btn-close {
+    top: 10px;
+    right: 5px;
+    position: absolute;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.c-modal__number {
+    position: absolute;
+    padding: 2px;
+    background-color: black;
+    color: white;
+}
+
+.c-modal__img {
+    display: block;
+    max-width: 100%;
+}
+
+.c-modal__description {
+    padding: 2px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+/* Thumb and @media */
+
+.c-modal__thumbs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.c-modal__thumb {
+    position: relative;
+    flex: 0 0 25%;
+    cursor: pointer;
+}
+
+.c-modal__thumb::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: black;
+    filter: opacity(.6);
+    height: 100%;
+    width: 100%;
+}
+
+.c-modal__thumb:hover::before {
+    filter: opacity(0);
+}
+
+.c-modal__thumb--active.c-modal__thumb::before {
+    filter: opacity(0);
+}
+
+.c-modal__thumb-img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* @media */
+
+@media screen and (min-width: 480px) {
+    .c-modal__content {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 786px) {
+    .c-modal__content {
+        max-width: 800px;
+    }
+
+    .c-modal__thumbs {
+        flex-wrap: nowrap;
+    }
+
+    .c-modal__thumb {
+        flex: 1;
+    }
+}
