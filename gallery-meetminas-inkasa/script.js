@@ -41,7 +41,7 @@ const gallery = [
 	}
 ]
 
-const showModal = () => modal.style.display = 'flex'
+const openModal = () => modal.style.display = 'flex'
 
 const closeModal = () => modal.style.display = 'none'
 
@@ -74,7 +74,7 @@ galleryItems.forEach(item => {
     item.addEventListener('click', event => {
         const indexImg = getImgIndex(event)
         updateModal(indexImg)
-        showModal()
+        openModal()
     })
 })
 
