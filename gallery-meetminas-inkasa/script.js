@@ -5,6 +5,8 @@ const sliderImg = document.querySelector('[data-modal="slider-img"]')
 const sliderDescription = document.querySelector('[data-modal="slider-description"]')
 const sliderNumber = document.querySelector('[data-modal="slider-number"]')
 const thumbImgs = document.querySelectorAll('[data-modal="thumb-img"]')
+const prevBtn = document.querySelector('[data-modal="prev-btn"]')
+const nextBtn = document.querySelector('[data-modal="next-btn"]')
 
 const gallery = [
 	{
@@ -41,6 +43,8 @@ const gallery = [
 	}
 ]
 
+let counterIndex = 0
+
 const openModal = () => modal.style.display = 'flex'
 
 const closeModal = () => modal.style.display = 'none'
@@ -48,6 +52,8 @@ const closeModal = () => modal.style.display = 'none'
 const getImgIndex = ({ target }) => {
     const arrFromChildren = Array.from(target.parentNode.children)
     const indexImg = arrFromChildren.indexOf(target)
+
+	counterIndex = indexImg
     
     return indexImg
 }
@@ -68,6 +74,20 @@ const updateModal = (index) => {
     thumbActive(index)
 }
 
+const prevImg = () => {
+	if (--counterIndex < 0) {
+		counterIndex = gallery.length - 1
+	}
+	updateModal(counterIndex)
+}
+
+const nextImg = () => {
+	if (++counterIndex > gallery.length - 1) {
+		counterIndex = 0
+	}
+	updateModal(counterIndex)
+}
+
 btnClose.addEventListener('click', closeModal)
 
 galleryItems.forEach(item => {
@@ -84,3 +104,6 @@ thumbImgs.forEach(img => {
         updateModal(indexImg)
     })
 })
+
+prevBtn.addEventListener('click', prevImg)
+nextBtn.addEventListener('click', nextImg)

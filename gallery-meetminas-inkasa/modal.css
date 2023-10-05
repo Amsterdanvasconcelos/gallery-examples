@@ -40,6 +40,10 @@
     color: white;
 }
 
+.c-modal__wrapper-img {
+    position: relative;
+}
+
 .c-modal__img {
     display: block;
     max-width: 100%;
@@ -52,6 +56,31 @@
     text-align: center;
 }
 
+.c-modal__buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.c-modal__prev-btn,
+.c-modal__next-btn {
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(235, 235, 235);
+    font-size: 40px;
+}
+
+.c-modal__prev-btn:hover,
+.c-modal__next-btn:hover {
+    color: rgb(0, 255, 85);
+}
 
 /* Thumb and @media */
 
